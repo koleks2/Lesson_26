@@ -15,4 +15,9 @@ int main() {
     String text5;
     text5 = std::move(text2);
     std::cout << "text5: " << text5 << std::endl;
+
+    text3[0] = 'h';
+    std::cout << "text3 after modifying index 0: " << text3 << std::endl;
+
+    std::cout << "First character of text3: " << text3[0] << std::endl;
 }

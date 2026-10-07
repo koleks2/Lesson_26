@@ -72,10 +72,16 @@ String& String::operator=(String&& other) noexcept {
 }
 
 char& String::operator[](int index) {
+    if (index < 0 || index >= this->GetStringLenght()) {
+        throw std::out_of_range("Index out of bounds!");
+    }
     return this->text[index];
 }
 
 const char& String::operator[](int index) const {
+    if (index < 0 || index >= this->GetStringLenght()) {
+        throw std::out_of_range("Index out of bounds!");
+    }
     return this->text[index];
 }
 
